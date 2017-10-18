@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6</title>
+    <link rel="stylesheet" type="text/css" href="6.css">
+</head>
+
+<body>
+    <h1>Sign Up For Free!</h1>
+    <form id="signup-form">
+
+        <div>
+
+            <input type="text" name="name" id="name" value="" placeholder="First Name" required>
+        </div>
+        <div>
+
+            <input type="text" name="last" id="last" value="" placeholder="Last Name" required>
+        </div>
+        <div>
+
+            <input type="email" name="email" id="email" value="" placeholder="example@globant.com" required>
+        </div>
+        <div>
+
+            <input type="date" name="bday" id="bday" value="" placeholder="01/01/1900" required>
+            <!-- This one works in Android and Chrome but it doesn't work on Mozzila, to make it work I have to use-->
+        </div>
+
+        <div>
+            <label for="sport">Favourite Sport :</label>
+            <select name="sport" id="sport" required>
+                <option value="">Select Sport</option>
+                <option value="Football">Football</option>
+                <option value="soccer">Soccer</option>
+                <option value="tennis">Tennis</option>
+                <option value="basketball">Basketball</option>
+                <option value="beisbol">Beisbol</option>
+                <option value="jockey">Jockey</option>
+            </select>
+        </div>
+        <div>
+
+            <textarea name="comments" id="comments" cols="40" rows="10" placeholder="Bio" required></textarea>
+        </div>
+        <div>
+            <input type="submit" value="submit" />
+            <input type="reset" value="reset" />
+        </div>
+
+
+    </form>
+
+
+
+
+</body>
+
+</html>
