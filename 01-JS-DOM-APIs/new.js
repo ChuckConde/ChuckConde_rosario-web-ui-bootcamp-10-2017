@@ -6,7 +6,7 @@ window.onload = showNinja;
 function callSamurai(){
     alert("I'm a samurai, nothing like ninja");
 }
-function getConfig() {
+function chuckJoke() {
     config = {
         method: "GET",
         url: "http://api.icndb.com/jokes/random",
