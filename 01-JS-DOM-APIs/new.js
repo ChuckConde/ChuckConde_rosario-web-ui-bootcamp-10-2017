@@ -20,9 +20,9 @@ function onClick(config) {
     xhttp.open(config.method, config.url, config.async);
     xhttp.onload = function (e) {
         if (this.readyState == 4 && this.status == 200) {
-            const response = JSON.parse(xhttp.response);
-            const resp = response.value;
-            document.getElementById("ninja").innerText = resp.joke;
+            const answer = JSON.parse(xhttp.response);
+            const ans = answer.value;
+            document.getElementById("ninja").innerText = ans.joke;
         } else {
             document.getElementById("ninja").innerText = xhttp.statusText;
             document.getElementById("ninja").style.backgroundColor = "red";
