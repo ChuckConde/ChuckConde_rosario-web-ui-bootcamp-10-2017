@@ -18,7 +18,7 @@ function chuckJoke() {
 function onClick(config) {
     const xhttp = new XMLHttpRequest();
     xhttp.open(config.method, config.url, config.async);
-    xhttp.onload = (e) => {
+    xhttp.onload = function (e) {
         if (this.readyState == 4 && this.status == 200) {
             const answer = JSON.parse(xhttp.response);
             const ans = answer.value;
