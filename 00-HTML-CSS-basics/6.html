@@ -14,21 +14,23 @@
     <form id="signup-form">
 
         <div>
-
+            <label for="name">First Name</label>
             <input type="text" name="name" id="name" placeholder="First Name" required>
         </div>
         <div>
-
+                <label for="last">Last Name</label>
             <input type="text" name="last" id="last" placeholder="Last Name" required>
         </div>
         <div>
-
+                <label for="em">Email
             <input type="email" name="email" id="email" placeholder="example@globant.com" required>
+        </label>
         </div>
         <div>
-
+                <label for="bd">Birthday
             <input type="date" name="bday" id="bday" placeholder="01/01/1900" required>
             <!-- This one works in Android and Chrome but it doesn't work on Mozzila, to make it work I have to use-->
+        </label>
         </div>
 
         <div>
@@ -44,14 +46,25 @@
             </select>
         </div>
         <div>
-
+                <label for="bio">Bio
             <textarea name="comments" id="comments" cols="40" rows="10" placeholder="Bio" required></textarea>
+        </label>
         </div>
+        <!-- This bit is kind of weird, in name and lastname I put the label before the input and close it before and everything goes fine
+            I use the same logic with email, date and text area, but after I run the Accessibility Developer Tools it says those arent label,
+            so I put them insede the labels and the ADT says that everything is alright, but I'm not sure why is that when I do something 
+            different in the name and lastname section -->
         <div>
-            <button type="submit"> Submit</button>
-            <button type="reset"> Reset</button>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
         </div>
+
+
     </form>
+
+
+
+
 </body>
 
 </html>
