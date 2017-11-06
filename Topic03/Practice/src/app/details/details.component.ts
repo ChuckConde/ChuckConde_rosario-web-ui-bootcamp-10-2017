@@ -9,6 +9,7 @@ import { Movie } from '../movie';
 })
 export class DetailsComponent implements OnInit {
   movie?: Movie;
+  editSummary = false;
   constructor(private route: ActivatedRoute, private moviesService: MoviesService) { }
   private getMovie(id: number): void {
     this.moviesService.getMovie(id).subscribe(movie => {
@@ -21,5 +22,7 @@ export class DetailsComponent implements OnInit {
       this.getMovie(id);
     });
   }
-
+  clickEdit(): void {
+    this.editSummary = !this.editSummary;
+  }
 }

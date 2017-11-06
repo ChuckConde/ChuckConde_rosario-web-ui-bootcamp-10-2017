@@ -1,4 +1,5 @@
 <div *ngIf="movie" class="container">
+  <div *ngIf="!editSummary">
   <img [src]="movie.poster" alt="">
   <ul>
     <li>{{movie.name}}</li>
@@ -11,8 +12,40 @@
     <h3>Staring:</h3>
     <hr>
     <div *ngFor="let star of movie.stars">
-    <p >Name: {{star.name}}</p>
+    <p>Name: {{star.name}}</p>
     <p>Born: {{star.born}}</p>
     <hr>
+    </div>
+    <button (click)="clickEdit()" class="btn btn-primary">Correct Something!</button>
   </div>
+  <div *ngIf="editSummary">
+    <ul>
+        <li>Name:</li>
+        <input [(ngModel)]="movie.name" type="text" class="form-control">
+      <li>Year</li>
+        <input [(ngModel)]="movie.year" type="number" class="form-control">
+      <li>Duration</li>
+        <input [(ngModel)]="movie.duration" type="text" class="form-control">
+      <li>Type</li>
+        <input [(ngModel)]="movie.type" type="text" class="form-control">
+        <li>Summary</li>
+        <input [(ngModel)]="movie.summary" type="text" class="form-control">
+        <li>Director</li>
+        <input [(ngModel)]="movie.director" type="text" class="form-control">
+      </ul>
+      <h3>Starring:</h3>
+      <div *ngFor="let star of movie.stars, let i = index">
+        <p>Actor name:
+          <input [(ngModel)]="movie.stars[i].name" type="text" class="form-control">
+        </p>
+        <p>Actor Born in:
+          <input [(ngModel)]="movie.stars[i].born" type="text" class="form-control">
+        </p>
+      </div>
+    <button (click)="clickEdit()" class="btn btn-primary">Submit</button>
+  </div>
+  </div>
+
+  <div *ngIf="!movie" class="container">
+    <p>It seems this movie doesn't Exist!</p>
   </div>
