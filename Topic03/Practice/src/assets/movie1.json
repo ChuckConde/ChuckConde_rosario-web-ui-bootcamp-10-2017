@@ -1,0 +1,20 @@
+{
+    "id": 1,
+    "name": "Fight Club",
+    "poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGY5Y2RjMmItNDg5Yy00NjUwLThjMTEtNDc2OGUzNTBiYmM1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "year": 1999,
+    "duration": "2h 19min",
+    "type": "Drama",
+    "summary": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more.",
+    "director": "David Fincher",
+    "stars":[
+        {
+            "name": "Brad Pitt",
+            "born":"December 18, 1963 in Shawnee, Oklahoma, USA"
+        },
+        {
+            "name":"Edward Norton",
+            "born":"August 18, 1969 in Boston, Massachusetts, USA"
+        }
+    ]
+}

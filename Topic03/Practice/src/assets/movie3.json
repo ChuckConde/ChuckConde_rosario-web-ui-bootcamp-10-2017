@@ -1,0 +1,20 @@
+{
+    "id": 3,
+    "name": "Léon: The Professional",
+    "poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BZDAwYTlhMDEtNTg0OS00NDY2LWJjOWItNWY3YTZkM2UxYzUzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR4,0,182,268_AL_.jpg",
+    "year": 1994,
+    "duration": "1h 50min",
+    "type": "Crime,Drama, Thriller",
+    "summary": "Mathilda, a 12-year-old girl, is reluctantly taken in by Léon, a professional assassin, after her family is murdered. Léon and Mathilda form an unusual relationship, as she becomes his protégée and learns the assassin's trade.",
+    "director": "Luc Besson",
+    "stars": [
+        {
+            "name": "Jean Reno",
+            "born": "Born: July 30, 1948 in Casablanca, French Protectorate of Morocco [now Morocco]"
+        },
+        {
+            "name": "Natalie Portman",
+            "born": "June 9, 1981 in Jerusalem, Israel"
+        }
+    ]
+}
