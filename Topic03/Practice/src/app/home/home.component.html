@@ -1,10 +1,11 @@
 <div class="movies container" *ngIf="movies.length">
-<div class="card" *ngFor="let movie of movies">
+<div class="card" *ngFor="let movie of movies, let i = index">
   <img class="card-img-top" [src]="movie.poster" alt="Card image cap">
   <div class="card-body">
     <h4 class="card-title">{{movie.name}}</h4>
     <p class="card-text">{{movie.summary}}</p>
-    <a href="#" class="btn btn-primary">Not yet</a>
+    <a [routerLink]="['/details', movie.id]"class="btn btn-primary">Details</a>
+    
   </div>
 </div>
 </div>
