@@ -1,0 +1,20 @@
+{
+    "id": 2,
+    "name": "The Dark Knight",
+    "poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "year": 2008,
+    "duration": "2h 32min",
+    "type": "Action,Crime,Drama",
+    "summary": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, the Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "director": "Christopher Nolan",
+    "stars": [
+        {
+            "name": "Christian Bale",
+            "born": " January 30, 1974 in Haverfordwest, Pembrokeshire, Wales, UK"
+        },
+        {
+            "name": "Heath Ledger",
+            "born": " April 4, 1979 in Perth, Western Australia, Australia and Died: January 22, 2008 (age 28) in Manhattan, New York City, New York, USA"
+        }
+    ]
+}

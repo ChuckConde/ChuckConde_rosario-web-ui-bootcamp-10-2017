@@ -1,0 +1,20 @@
+{
+    "id": 4,
+    "name": "Spirited Away",
+    "poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGJjNzZmMmUtMjljNC00ZjU5LWJiODQtZmEzZTU0MjBlNzgxL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "year": 2001,
+    "duration": "2h 5min",
+    "type": "Animation, Adventure, Family ",
+    "summary": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+    "director": "Hayao Miyazaki",
+    "stars": [
+        {
+            "name": "Rumi Hiiragi(Chihiro)",
+            "born": "August 1, 1987 in Tokyo, Japan"
+        },
+        {
+            "name": "Miyu Irino(Haku)",
+            "born": "February 19, 1988 in Tokyo, Japan"
+        }
+    ]
+}
