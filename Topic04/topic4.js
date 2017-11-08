@@ -48,3 +48,30 @@ function rTextDB() {
     document.getElementById('tAreaDB').value = ''
     console.log('You killed the text!');
 }
+
+
+let holder = document.getElementById('holder');
+
+holder.ondragover = function () {
+    this.className = 'hover';
+    return false;
+};
+holder.ondragend = function () {
+    this.className = '';
+    return false;
+};
+holder.ondrop = function (e) {
+    this.className = '';
+    e.preventDefault();
+
+    var file = e.dataTransfer.files[0],
+        reader = new FileReader();
+    reader.onload = function (event) {
+        console.log(event.target);
+        holder.innerText = event.target.result;
+    };
+    console.log(file);
+    reader.readAsText(file);
+
+    return false;
+};
