@@ -35,7 +35,7 @@ function sTextDB() {
     let content = document.getElementById('tAreaDB').value;
     let request = store.put(content);
     request.onerror = function (e) {
-        console.log('Cant add text + e.target.error.name);
+        console.log('Cant add text + e.target.error.name');
     }
     request.onsuccess = function (e) {
         console.log('Succes!');
