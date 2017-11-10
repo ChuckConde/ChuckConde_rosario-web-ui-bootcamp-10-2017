@@ -1,0 +1,12 @@
+<div class="list container">
+  <h1>Player Search</h1>
+  <input type="text" id="e" placeholder="Search for your Player here">
+  <select>
+    <option value="default">Choose the player Realm</option>
+    <option value="realm" *ngFor="let realm of realms.realms">{{ realm.name }}</option>
+  </select>
+  <button onclick="" class="btn btn-dark">Search</button>
+  <ul id="exit">
+
+  </ul>
+</div>

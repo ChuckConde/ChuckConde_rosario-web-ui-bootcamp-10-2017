@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+        <th scope="col">Population</th>
+        <th scope="col">Battlegroup</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let realm of realms.realms">
+        <th scope="row" class="text-light bg-dark">{{ realm.name }}</th>
+        <td class="text-light bg-dark">{{ realm.type }}</td>
+        <td class="text-light bg-dark">{{ realm.status }}</td>
+        <td class="text-light bg-dark">{{ realm.population }}</td>
+        <td class="text-light bg-dark">{{ realm.battlegroup}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
