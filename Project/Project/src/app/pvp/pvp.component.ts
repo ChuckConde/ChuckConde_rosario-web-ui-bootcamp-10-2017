@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PvpService } from '../pvp.service';
 import { Pvp } from '../pvp';
 import { Pvp3v3Service } from '../pvp3v3.service';

@@ -5,8 +5,8 @@
         <th scope="col">Name</th>
         <th scope="col">Type</th>
         <th scope="col">Status</th>
-        <th scope="col">Population</th>
         <th scope="col">Battlegroup</th>
+        <th scope="col">Population</th>
       </tr>
     </thead>
     <tbody>
@@ -14,8 +14,11 @@
         <th scope="row" class="text-light bg-dark">{{ realm.name }}</th>
         <td class="text-light bg-dark">{{ realm.type }}</td>
         <td class="text-light bg-dark">{{ realm.status }}</td>
-        <td class="text-light bg-dark">{{ realm.population }}</td>
         <td class="text-light bg-dark">{{ realm.battlegroup}}</td>
+        <td *ngIf="realm.population == 'n/a'" class="text-light na">{{ realm.population }}</td>
+        <td *ngIf="realm.population == 'low'" class="text-light low">{{ realm.population }}</td>
+        <td *ngIf="realm.population == 'medium'" class="text-light medium" >{{ realm.population }}</td>
+        <td *ngIf="realm.population == 'full'" class="text-light full">{{ realm.population }}</td>
       </tr>
     </tbody>
   </table>

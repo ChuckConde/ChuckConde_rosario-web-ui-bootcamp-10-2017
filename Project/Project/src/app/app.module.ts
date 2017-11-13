@@ -5,8 +5,6 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { PvpComponent } from './pvp/pvp.component';
-import { ChallengeComponent } from './challenge/challenge.component';
-import { GuildsComponent } from './guilds/guilds.component';
 import { FooterComponent } from './footer/footer.component';
 import { RealmsComponent } from './realms/realms.component';
 import { HttpModule } from '@angular/http';
@@ -15,7 +13,12 @@ import { PvpService } from './pvp.service';
 import { Pvp3v3Service } from './pvp3v3.service';
 import { PvprbgService } from './pvprbg.service';
 import { PlayerComponent } from './player/player.component';
+import { PlayerService } from './player.service';
 import { PlayerSummaryComponent } from './player-summary/player-summary.component';
+import { GuildComponent } from './guild/guild.component';
+import { GuildSummaryComponent } from './guild-summary/guild-summary.component';
+import { GuildService } from './guild.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,23 +26,26 @@ import { PlayerSummaryComponent } from './player-summary/player-summary.componen
     NavBarComponent,
     HomeComponent,
     PvpComponent,
-    ChallengeComponent,
-    GuildsComponent,
     FooterComponent,
     RealmsComponent,
     PlayerComponent,
-    PlayerSummaryComponent
+    PlayerSummaryComponent,
+    GuildComponent,
+    GuildSummaryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [
     RealmsService,
     PvpService,
     Pvp3v3Service,
-    PvprbgService
+    PvprbgService,
+    PlayerService,
+    GuildService
   ],
   bootstrap: [AppComponent]
 })

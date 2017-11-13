@@ -1,0 +1,13 @@
+<div *ngIf="guilds">
+  <p>{{guilds.name}}</p>
+  <p>{{guilds.level}}</p>
+  <div *ngFor="let member of guilds.members">
+    <p>{{member.character.name}}</p>
+  
+  </div>
+</div>
+
+
+<div class="noguilds" *ngIf="!guilds">
+  Guilds doesn't found
+</div>

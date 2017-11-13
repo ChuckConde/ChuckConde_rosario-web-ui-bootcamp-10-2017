@@ -6,7 +6,7 @@ import { Realms } from './realms';
 @Injectable()
 export class RealmsService {
 
-  constructor(private http: Http) {}
+  constructor(private http: Http) { }
 
   getRealmslist(): Observable<Realms[]> {
     return this.http

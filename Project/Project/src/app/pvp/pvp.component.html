@@ -20,6 +20,11 @@
         <td class="text-light bg-dark">{{ pvp.seasonWins }}</td>
         <td class="text-light bg-dark">{{ pvp.seasonLosses }}</td>
         <td class="text-light bg-dark">{{ pvp.rating }}</td>
+        <td class="text-light bg-dark">
+          <a href="" class="btn btn-primary" [routerLink]="['/playersummary', pvp.realmName, pvp.name]">
+            <img src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" alt="">
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -45,6 +50,11 @@
         <td class="text-light bg-dark">{{ pvp3v3.seasonWins }}</td>
         <td class="text-light bg-dark">{{ pvp3v3.seasonLosses }}</td>
         <td class="text-light bg-dark">{{ pvp3v3.rating }}</td>
+        <td class="text-light bg-dark">
+          <a href="" class="btn btn-primary" [routerLink]="['/playersummary', pvp3v3.realmName, pvp3v3.name]">
+            <img src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" alt="">
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -70,6 +80,11 @@
         <td class="text-light bg-dark">{{ pvprbg.seasonWins }}</td>
         <td class="text-light bg-dark">{{ pvprbg.seasonLosses }}</td>
         <td class="text-light bg-dark">{{ pvprbg.rating }}</td>
+        <td class="text-light bg-dark">
+          <a href="" class="btn btn-primary" [routerLink]="['/playersummary', pvprbg.realmName, pvprbg.name]">
+            <img src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" alt="">
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
