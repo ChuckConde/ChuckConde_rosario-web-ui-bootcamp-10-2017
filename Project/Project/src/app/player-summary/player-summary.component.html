@@ -1,5 +1,5 @@
 <div *ngIf="players">
-  <img [src]="renderPath" alt="">
+  <img class="imgProfile img-fluid"[src]="renderPath" onerror="this.src = 'https://img00.deviantart.net/816e/i/2016/139/8/a/fanart__leeroy_jenkins_by_caiogomides-da31lrj.png';" alt="">
   <p>{{players.name}}</p>
   <p>{{players.battlegroup}}</p>
 </div>
