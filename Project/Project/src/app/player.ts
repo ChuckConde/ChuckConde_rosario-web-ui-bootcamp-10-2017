@@ -11,5 +11,9 @@ export interface Player {
     thumbnail: string;
     calcClass: string;
     faction: number;
+    guild?: Object;
+    items?: any;
+    stats: Object;
+    pvp?: any;
     totalHonorableKills: number;
 }

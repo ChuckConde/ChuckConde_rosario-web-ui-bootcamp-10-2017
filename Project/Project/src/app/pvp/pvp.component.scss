@@ -1,4 +1,5 @@
-img{
-    height: 2rem;
-    width: 2 rem;
+@media (max-width: 900px){
+    .fontTable{
+        font-size: 11px;
+    }
 }

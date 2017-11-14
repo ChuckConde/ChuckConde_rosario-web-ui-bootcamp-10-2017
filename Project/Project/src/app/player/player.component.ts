@@ -4,7 +4,6 @@ import { Realms } from '../realms';
 import { PlayerService} from '../player.service';
 import { Player } from '../player';
 import { Router, ActivatedRoute } from '@angular/router';
-import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-player',

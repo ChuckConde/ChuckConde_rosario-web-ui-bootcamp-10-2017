@@ -10,3 +10,8 @@
 .full{
     background-color: red;
 }
+@media (max-width: 900px){
+    .fontTable{
+        font-size: 12px;
+    }
+}
