@@ -29,21 +29,21 @@ html {
 
 .navigation{
     display: block;
-    max-width: 40rem; 
+    max-width: 640px; 
     background-color: red;
     font-size: 12px;
     border: 5px solid black;
     position: fixed;
     left: 0;
-    bottom: 8em;
-    top: 8em;
+    bottom: 128px;
+    top: 128px;
     width: 18%;
 }
 .content{
     display: block;
-    max-width: 70rem;
+    max-width: 1120px;
     font-size: 14px; 
-    height: 60em;
+    height: 960px;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -51,28 +51,28 @@ html {
 }
 .sidebar{
     display: block;
-    max-width: 40rem; 
+    max-width: 640px; 
     background-color: rgb(0, 153, 255);
     font-size: 10px;
     border: 5px solid black;
     position: fixed;
     right: 0;
-    top: 8em;
-    bottom: 8em;
+    top: 128px;
+    bottom: 128px;
     width: 18%;
 }
 .header{
     background-color: orange;
     text-align: center;
     font-size: 46px;
-    height: 8em;
+    height: 128px;
 }
 .footer{
     background-color: purple;
     text-align: center;
     font-size: 10px;
-    height: 8em;
-    margin-top: 1em;
+    height: 128px;
+    margin-top: 16px;
 }
 
 
@@ -84,8 +84,8 @@ html {
 }
 .innerContent{
     text-align: center;
-    height: 17em;
+    height: 272px;
     background-color:grey;
     border: 2px solid black;
-    margin: 2em;
+    margin: 32px;
 }
