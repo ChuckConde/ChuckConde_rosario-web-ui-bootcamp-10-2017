@@ -12,6 +12,7 @@ export class MoviesService {
   getMovies(): Observable<Movie[]> {
     return this.http
       .get('/assets/movies.json')
+      // I might not be getting this point here
       .map(data => data.json());
   }
   getMovie(id: number) {
