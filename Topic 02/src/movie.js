@@ -21,7 +21,7 @@ class Movie extends EventEmitter {
         if (cast instanceof Actor) {
             this._cast.push(cast);
         }
-        else if (Array.isArray(cast)) {
+        else if (Array.map(cast)) {
             for (let i = 0; i < cast.length; i++) {
                 if (cast[i] instanceof Actor) {
                     this._cast.push(cast[i]);
