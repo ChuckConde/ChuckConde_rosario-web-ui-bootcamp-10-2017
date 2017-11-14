@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box
+  }
+  *, *:before, *:after {
+    box-sizing: inherit
+  }
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.images{
+    flex: 1;
+    height: 20em;
+    margin: 1.5%;
+    flex-basis: 30%;
+    display: flex;
+    position: relative;
+}
+.heroes{
+    flex: 1;
+    max-width:100%;
+    max-height:100%;
+}
+h1{
+    margin: auto;
+    text-align: center;
+    font-size: 10em;
+}
+.descrip{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(33, 37, 32, 0.562)
+}
+.images:hover .descrip{
+    visibility: visible;
+}
+p{
+    font-size: 2em;
+}
+
+@media (min-width: 900px){
+    .container{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+}
