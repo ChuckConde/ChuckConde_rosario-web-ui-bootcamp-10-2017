@@ -17,7 +17,7 @@ export class DetailsComponent implements OnInit {
   }
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const id = params['id'];
+      const id = params.id;
       this.getMovie(id);
     });
   }

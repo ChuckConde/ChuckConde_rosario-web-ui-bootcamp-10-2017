@@ -1,5 +1,5 @@
 <div class="movies container" *ngIf="movies.length">
-<div class="card" *ngFor="let movie of movies, let i = index">
+<div class="card" *ngFor="let movie of movies">
   <img class="card-img-top" [src]="movie.poster" alt="Card image cap">
   <div class="card-body">
     <h4 class="card-title">{{movie.name}}</h4>
