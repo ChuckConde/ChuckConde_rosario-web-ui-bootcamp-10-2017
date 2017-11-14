@@ -1,0 +1,20 @@
+{
+    "id": 5,
+    "name": "Back to the Future",
+    "poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "year": 1985,
+    "duration": "1h 56min",
+    "type": "Adventure, Comedy, Sci-Fi",
+    "summary": "Marty McFly, a seventeen-year-old high school student, is accidentally sent thirty years into the past in a time-travelling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
+    "director": "Robert Zemeckis",
+    "stars": [
+        {
+            "name": "Michael J. Fox",
+            "born": "June 9, 1961 in Edmonton, Alberta, Canada"
+        },
+        {
+            "name": "Christopher Lloyd",
+            "born": "October 22, 1938 in Stamford, Connecticut, USA"
+        }
+    ]
+}

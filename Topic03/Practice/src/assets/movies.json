@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Fight Club",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZGY5Y2RjMmItNDg5Yy00NjUwLThjMTEtNDc2OGUzNTBiYmM1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "year": 1999,
+        "duration": "2h 19min",
+        "type": "Drama",
+        "summary": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more.",
+        "director": "David Fincher",
+        "stars": [
+            {
+                "name": "Brad Pitt",
+                "born": "December 18, 1963 in Shawnee, Oklahoma, USA"
+            },
+            {
+                "name": "Edward Norton",
+                "born": "August 18, 1969 in Boston, Massachusetts, USA"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "The Dark Knight",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "year": 2008,
+        "duration": "2h 32min",
+        "type": "Action,Crime,Drama",
+        "summary": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, the Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "director": "Christopher Nolan",
+        "stars": [
+            {
+                "name": "Christian Bale",
+                "born": " January 30, 1974 in Haverfordwest, Pembrokeshire, Wales, UK"
+            },
+            {
+                "name": "Heath Ledger",
+                "born": " April 4, 1979 in Perth, Western Australia, Australia and Died: January 22, 2008 (age 28) in Manhattan, New York City, New York, USA"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Léon: The Professional",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZDAwYTlhMDEtNTg0OS00NDY2LWJjOWItNWY3YTZkM2UxYzUzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "year": 1994,
+        "duration": "1h 50min",
+        "type": "Crime,Drama, Thriller",
+        "summary": "Mathilda, a 12-year-old girl, is reluctantly taken in by Léon, a professional assassin, after her family is murdered. Léon and Mathilda form an unusual relationship, as she becomes his protégée and learns the assassin's trade.",
+        "director": "Luc Besson",
+        "stars": [
+            {
+                "name": "Jean Reno",
+                "born": "Born: July 30, 1948 in Casablanca, French Protectorate of Morocco [now Morocco]"
+            },
+            {
+                "name": "Natalie Portman",
+                "born": "June 9, 1981 in Jerusalem, Israel"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Spirited Away",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BOGJjNzZmMmUtMjljNC00ZjU5LWJiODQtZmEzZTU0MjBlNzgxL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "year": 2001,
+        "duration": "2h 5min",
+        "type": "Animation, Adventure, Family ",
+        "summary": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+        "director": "Hayao Miyazaki",
+        "stars": [
+            {
+                "name": "Rumi Hiiragi(Chihiro)",
+                "born": "August 1, 1987 in Tokyo, Japan"
+            },
+            {
+                "name": "Miyu Irino(Haku)",
+                "born": "February 19, 1988 in Tokyo, Japan"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Back to the Future",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "year": 1985,
+        "duration": "1h 56min",
+        "type": "Adventure, Comedy, Sci-Fi",
+        "summary": "Marty McFly, a seventeen-year-old high school student, is accidentally sent thirty years into the past in a time-travelling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
+        "director": "Robert Zemeckis",
+        "stars": [
+            {
+                "name": "Michael J. Fox",
+                "born": "June 9, 1961 in Edmonton, Alberta, Canada"
+            },
+            {
+                "name": "Christopher Lloyd",
+                "born": "October 22, 1938 in Stamford, Connecticut, USA"
+            }
+        ]
+    }
+]
