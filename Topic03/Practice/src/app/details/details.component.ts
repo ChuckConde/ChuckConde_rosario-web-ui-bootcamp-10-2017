@@ -8,6 +8,7 @@ import { Movie } from '../movie';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
+
   movie?: Movie;
   editSummary: boolean = false;
   constructor(private route: ActivatedRoute, private moviesService: MoviesService) { }
@@ -18,7 +19,7 @@ export class DetailsComponent implements OnInit {
   }
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const id = params['id'];
+      const id = params.id;
       this.getMovie(id);
     });
   }

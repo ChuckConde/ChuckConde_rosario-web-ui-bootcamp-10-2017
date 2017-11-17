@@ -14,9 +14,8 @@ export class HomeComponent implements OnInit {
   eraseMovie(i: number): void {
     this.movies.splice(i, 1);
   }
-  addMovie(movie: string, url: string, detail: string): void {
-    const newMovie = new Movie(movie, url, detail);
-    this.movies.push(newMovie);
+  addMovie(movie: string, url: string, detail: string, made: number, time: string, genre: string, supervisor: string): void {
+    const newMovie = new Movie(movie, url, detail, made, time, genre, supervisor);
   }
   ngOnInit() {
     this.moviesService.getMovies().subscribe(movies => {
