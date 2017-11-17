@@ -1,5 +1,5 @@
 export interface Player {
-    lastModified: number;
+    lastModified?: number;
     name: string;
     realm: string;
     battlegroup: string;
@@ -9,11 +9,12 @@ export interface Player {
     level: number;
     achievementPoints: number;
     thumbnail: string;
-    calcClass: string;
-    faction: number;
+    spec?: Object;
+    calcClass?: string;
+    faction?: number;
     guild?: Object;
     items?: any;
-    stats: Object;
+    stats?: Object;
     pvp?: any;
-    totalHonorableKills: number;
+    totalHonorableKills?: number;
 }
