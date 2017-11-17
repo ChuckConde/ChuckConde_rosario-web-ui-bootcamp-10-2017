@@ -8,7 +8,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MoviesService } from './movies.service';
-import { SearchService } from './search.service';
+import { ActionService } from './action.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { SearchService } from './search.service';
   ],
   providers: [
     MoviesService,
-    SearchService
+    ActionService
   ],
   bootstrap: [AppComponent]
 })

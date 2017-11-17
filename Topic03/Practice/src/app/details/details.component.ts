@@ -8,6 +8,7 @@ import { Movie } from '../movie';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
+
   movie?: Movie;
   editSummary: boolean = false;
   constructor(private route: ActivatedRoute, private moviesService: MoviesService) { }

@@ -13,8 +13,6 @@ export class MoviesService {
   }
   // not ready yet
   getMovie(id: number) {
-    return this.http
-      .get(`/assets/movie${id}.json`, { responseType: ResponseContentType.Json })
-      .map(data => data.json());
+    return this.actionService.getAction(`/assets/movie${id}.json`);
   }
 }

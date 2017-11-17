@@ -7,6 +7,7 @@ export class Movie {
     type: string;
     summary: string;
     director: string;
+
     stars: Object[];
     constructor(movie: string, url: string, detail: string, made: number, time: string, genre: string, supervisor: string) {
         this.name = movie;
@@ -17,4 +18,5 @@ export class Movie {
         this.type = genre;
         this.director = supervisor;
     }
+
 }
