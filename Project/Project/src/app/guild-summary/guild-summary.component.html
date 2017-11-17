@@ -43,8 +43,8 @@
               alt=""> {{ member.character.name }}
           </a>
         </th>
-        <td class="text-light bg-dark">{{ getClassP(member.character.class) }}</td>
-        <td class="text-light bg-dark">{{ getRace(member.character.race) }}</td>
+        <td class="text-light bg-dark" *ngIf="classFound">{{ classCheck(member.character.class) }}</td>
+        <td class="text-light bg-dark" *ngIf="raceFound">{{ raceCheck(member.character.race) }}</td>
       </tr>
     </tbody>
   </table>
