@@ -15,17 +15,7 @@ export class HomeComponent implements OnInit {
     this.movies.splice(i, 1);
   }
   addMovie(movie: string, url: string, detail: string): void {
-    const newMovie = {
-      id: this.movies.length + 1,
-      name: movie,
-      poster: url,
-      year: 0,
-      duration: '',
-      type: '',
-      summary: detail,
-      director: '',
-      stars: []
-    };
+    const newMovie = new Movie(movie, url, detail);
     this.movies.push(newMovie);
   }
   ngOnInit() {
