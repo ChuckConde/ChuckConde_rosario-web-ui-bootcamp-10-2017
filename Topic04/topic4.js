@@ -21,12 +21,12 @@ tDB.onupgradeneeded = function (e) {
 };
 
 tDB.onerror = function (e) {
-    console.log('A wild Error has appeared: ' + e);
+    console.log('Something went wrong: ' + e);
 };
 
 tDB.onsuccess = function (e) {
     db = e.target.result;
-    console.log("It works!: " + db);
+    console.log("Yay! Success: " + db);
 };
 
 function sTextDB() {
@@ -35,10 +35,10 @@ function sTextDB() {
     let content = document.getElementById('tAreaDB').value;
     let request = store.put(content);
     request.onerror = function (e) {
-        console.log('Cant add text + e.target.error.name');
+        console.log('Unable to add text' + e.target.error.name);
     }
     request.onsuccess = function (e) {
-        console.log('Succes!');
+        console.log('Text added to database!');
     }
 }
 function rTextDB() {
@@ -46,6 +46,7 @@ function rTextDB() {
     let store = transaction.objectStore('text');
     store.clear();
     document.getElementById('tAreaDB').value = ''
+
     console.log('You killed the text!');
 }
 
@@ -75,6 +76,7 @@ holder.ondrop = function (e) {
 
     return false;
 };
+
 function sMsg() {
     let ws = new WebSocket('ws://demos.kaazing.com/echo');
     let msg = document.getElementById('msg').value;
@@ -101,3 +103,31 @@ function sMsg() {
         socket.close();
     };
 }
+function drawCanvas() {
+    const canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = randomColor();
+        ctx.fillRect(0, 100, 80, 50);
+        ctx.fillStyle = randomColor();
+        ctx.fillRect(90, 50, 80, 50);
+        ctx.fillStyle = randomColor();
+        ctx.fillRect(180, 0, 80, 50);
+        for (let i = 0; i < Math.random() * 100; i++) {
+            ctx.fillStyle = randomColor();
+            ctx.beginPath();
+            ctx.arc((Math.random() * 300), (Math.random() * 300), 10, 0, (Math.PI * 2), false);
+            ctx.fill();
+        }
+    }
+}
+
+function randomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let randomColor = `rgb(${r}, ${g}, ${b})`;
+    return randomColor;
+}
+
+drawCanvas();

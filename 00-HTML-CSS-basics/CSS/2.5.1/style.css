@@ -1,0 +1,91 @@
+
+
+
+@media (min-width: 1024px) { 
+    html { font-size: 120%; }
+  }
+
+
+
+@media (min-width: 640px) { 
+    html { font-size: 112%; }
+  }
+
+html {
+    box-sizing: border-box
+  }
+  *, *:before, *:after {
+    box-sizing: inherit
+  }
+
+
+
+
+*{
+    font-size: 14px !important;
+    font-family: "Comic Sans MS";
+}
+
+
+.navigation{
+    display: block;
+    max-width: 640px; 
+    background-color: red;
+    font-size: 12px;
+    border: 5px solid black;
+    position: fixed;
+    left: 0;
+    bottom: 128px;
+    top: 128px;
+    width: 18%;
+}
+.content{
+    display: block;
+    max-width: 1120px;
+    font-size: 14px; 
+    height: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
+}
+.sidebar{
+    display: block;
+    max-width: 640px; 
+    background-color: rgb(0, 153, 255);
+    font-size: 10px;
+    border: 5px solid black;
+    position: fixed;
+    right: 0;
+    top: 128px;
+    bottom: 128px;
+    width: 18%;
+}
+.header{
+    background-color: orange;
+    text-align: center;
+    font-size: 46px;
+    height: 128px;
+}
+.footer{
+    background-color: purple;
+    text-align: center;
+    font-size: 10px;
+    height: 128px;
+    margin-top: 16px;
+}
+
+
+[class$="r"]{
+    background-color: magenta;
+}
+[class*="a"]:not([class$="r"]){
+    background-color: blue;
+}
+.innerContent{
+    text-align: center;
+    height: 272px;
+    background-color:grey;
+    border: 2px solid black;
+    margin: 32px;
+}

@@ -1,5 +1,5 @@
 <div class="movies container" *ngIf="movies.length">
-<div class="card" *ngFor="let movie of movies, let i = index">
+<div class="card" *ngFor="let movie of movies">
   <img class="card-img-top" [src]="movie.poster" alt="Card image cap">
   <div class="card-body">
     <h4 class="card-title">{{movie.name}}</h4>
@@ -13,7 +13,11 @@
 <input class="form-control" [(ngModel)]="movie" placeholder="Title of the Movie">
 <input class="form-control" [(ngModel)]="url" placeholder="Url of the Poster Img">
 <input class="form-control" [(ngModel)]="detail" placeholder="Summary of the movie">
-<button type="button" class="btn btn-primary" (click)="addMovie(movie, url, detail)">Add movie!</button>
+<input class="form-control" [(ngModel)]="made" placeholder="Year">
+<input class="form-control" [(ngModel)]="time" placeholder="Duration of the Movie">
+<input class="form-control" [(ngModel)]="genre" placeholder="Action, Drama, Etc">
+<input class="form-control" [(ngModel)]="supervisor" placeholder="Director of the Movie">
+<button type="button" class="btn btn-primary" (click)="addMovie(movie, url, detail, made, time, genre, supervisor)">Add movie!</button>
 </div>
 </div>
 <p *ngIf="!movies.length">The answer to life the universe and everything is 42</p>
