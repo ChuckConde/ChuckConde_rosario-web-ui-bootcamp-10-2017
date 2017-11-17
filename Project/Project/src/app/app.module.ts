@@ -19,6 +19,9 @@ import { GuildComponent } from './guild/guild.component';
 import { GuildSummaryComponent } from './guild-summary/guild-summary.component';
 import { GuildService } from './guild.service';
 import { FormsModule } from '@angular/forms';
+import { ActionService } from './action.service';
+import { ClassService } from './class.service';
+import { RaceService } from './race.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { FormsModule } from '@angular/forms';
     Pvp3v3Service,
     PvprbgService,
     PlayerService,
-    GuildService
+    GuildService,
+    ActionService,
+    ClassService,
+    RaceService
   ],
   bootstrap: [AppComponent]
 })

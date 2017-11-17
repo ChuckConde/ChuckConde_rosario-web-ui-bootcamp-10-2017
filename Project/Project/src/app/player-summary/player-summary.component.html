@@ -70,8 +70,8 @@
         <th scope="row" class="text-light bg-dark">
           <img class="thumbnailImg img-fluid" src="http://render-us.worldofwarcraft.com/character/{{players.thumbnail}}" 
            onerror="this.src = 'http://www.stallerdental.com/wp-content/uploads/2016/12/user-icon.png';" alt=""> {{ players.name }}</th>
-        <td class="text-light bg-dark">{{ getClassP(players.class) }}</td>
-        <td class="text-light bg-dark">{{ getRace(players.race)}}</td>
+        <td class="text-light bg-dark" *ngIf="classFound">{{ classCheck(players.class) }}</td>
+        <td class="text-light bg-dark" *ngIf="raceFound">{{ raceCheck(players.race)}}</td>
         <td class="text-light bg-dark" *ngIf="players.gender === 0">Male</td>
         <td class="text-light bg-dark" *ngIf="players.gender === 1">Female</td>
         <td class="text-light bg-dark">{{ players.level }}</td>
