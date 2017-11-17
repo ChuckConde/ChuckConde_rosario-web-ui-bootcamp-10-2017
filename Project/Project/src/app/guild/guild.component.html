@@ -7,7 +7,7 @@
   <h1>Guild Search</h1>
   <input [(ngModel)]="guild" type="text" id="guild" name="guild" placeholder="Search for your Guild here">
   <select [(ngModel)]="realm" name="realm">
-    <option [value]="realm.name" *ngFor="let realm of realms.realms" id="realm">{{ realm.name }}</option>
+    <option [value]="realm.name" *ngFor="let realm of realms" id="realm">{{ realm.name }}</option>
   </select>
   <button (click)="getGuild()" class="btn btn-dark">Search</button>
 </div>

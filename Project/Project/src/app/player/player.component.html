@@ -7,7 +7,7 @@
   <h1>Player Search</h1>
   <input [(ngModel)]="player" type="text" id="player"  name="player" placeholder="Search for your Player here">
   <select [(ngModel)]="realm" name="realm">
-    <option [value]="realm.name" *ngFor="let realm of realms.realms" id="realm">{{ realm.name }}</option>
+    <option [value]="realm.name" *ngFor="let realm of realms" id="realm">{{ realm.name }}</option>
   </select>
   <button (click)="getPlayer()" class="btn btn-dark">Search</button>
   <ul id="exit">

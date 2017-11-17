@@ -17,8 +17,8 @@ export class GuildComponent implements OnInit {
   constructor(private realmsService: RealmsService, private guildService: GuildService, private router: Router) { }
 
   ngOnInit() {
-    this.realmsService.getRealmslist().subscribe(realms => {
-      this.realms = realms;
+    this.realmsService.getRealmslist().subscribe(answer => {
+      this.realms = answer.realms;
     });
   }
   getGuild() {

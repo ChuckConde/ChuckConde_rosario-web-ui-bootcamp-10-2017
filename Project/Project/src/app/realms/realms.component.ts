@@ -11,8 +11,8 @@ export class RealmsComponent implements OnInit {
   constructor( private realmsService: RealmsService) { }
 
   ngOnInit() {
-    this.realmsService.getRealmslist().subscribe(realms => {
-      this.realms = realms;
+    this.realmsService.getRealmslist().subscribe(answer => {
+      this.realms = answer.realms;
     });
   }
 
