@@ -1,21 +1,17 @@
 import { Injectable } from '@angular/core';
-import { ResponseType, ResponseContentType, Response } from '@angular/http';
+import { Http, ResponseType, ResponseContentType, Response } from '@angular/http';
+import { SearchService } from './search.service';
 import { Movie } from './movie';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { ActionService } from './action.service';
-
 @Injectable()
 export class MoviesService {
 
-  constructor(private actionService: ActionService) { }
-  
+  constructor(private http: Http, private searchService: SearchService) { }
   getMovies(): Observable<Movie[]> {
-    return this.http
-      .get('/assets/movies.json')
-      // I might not be getting this point here
-      .map(data => data.json());
+    return this.searchService.getFileJson('/assets/movies.json');
   }
+  // not ready yet
   getMovie(id: number) {
     return this.actionService.getAction(`/assets/movie${id}.json`);
   }
