@@ -17,7 +17,7 @@ export class PlayerSummaryComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      this.getPlayersummary(params['realm'], params['name']);
+      this.getPlayersummary(params.realm, params.name);
     });
   }
   playerRenderStringGenerator(thumbnail: string) {

@@ -15,7 +15,7 @@ export class GuildSummaryComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      this.getGuildsummary(params['realm'], params['name']);
+      this.getGuildsummary(params.realm, params.name);
     });
   }
   private getGuildsummary(realm: string, name: string) {
