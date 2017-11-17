@@ -34,15 +34,15 @@
         <input [(ngModel)]="movie.director" type="text" class="form-control">
       </ul>
       <h3>Starring:</h3>
-      <div *ngFor="let star of movie.stars, let i = index">
+      <div *ngFor="let star of movie.stars">
         <p>Actor name:
-          <input [(ngModel)]="movie.stars[i].name" type="text" class="form-control">
+          <input [(ngModel)]="star.name" type="text" class="form-control">
         </p>
         <p>Actor Born in:
-          <input [(ngModel)]="movie.stars[i].born" type="text" class="form-control">
+          <input [(ngModel)]="star.born" type="text" class="form-control">
         </p>
       </div>
-    <button (click)="clickEdit()" class="btn btn-primary">Submit</button>
+    <button type="button"   (click)="clickEdit()" class="btn btn-primary">Submit </button>
   </div>
   </div>
 
