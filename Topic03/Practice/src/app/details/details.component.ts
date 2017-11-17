@@ -8,8 +8,8 @@ import { Movie } from '../movie';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-  movie?: Movie;
-  editSummary = false;
+  movie: Movie;
+  editSummary: boolean;
   constructor(private route: ActivatedRoute, private moviesService: MoviesService) { }
   private getMovie(id: number): void {
     this.moviesService.getMovie(id).subscribe(movie => {
