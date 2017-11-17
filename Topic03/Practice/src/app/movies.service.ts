@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Http, ResponseType, ResponseContentType, Response } from '@angular/http';
+import { ResponseType, ResponseContentType, Response } from '@angular/http';
 import { Movie } from './movie';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { ActionService } from './action.service';
 
 @Injectable()
 export class MoviesService {
 
-  constructor(private http: Http) { }
-
+  constructor(private actionService: ActionService) { }
+  
   getMovies(): Observable<Movie[]> {
     return this.http
       .get('/assets/movies.json')
+      // I might not be getting this point here
       .map(data => data.json());
   }
   getMovie(id: number) {
-    return this.http
-      .get(`/assets/movie${id}.json`, { responseType: ResponseContentType.Json })
-      .map(data => data.json());
+    return this.actionService.getAction(`/assets/movie${id}.json`);
   }
 }

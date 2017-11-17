@@ -7,10 +7,12 @@ export class Movie {
     type: string;
     summary: string;
     director: string;
+
     stars: Object[];
     constructor(movie: string, url: string, detail: string) {
         this.name = movie;
         this.poster = url;
         this.summary = detail;
     }
+
 }
