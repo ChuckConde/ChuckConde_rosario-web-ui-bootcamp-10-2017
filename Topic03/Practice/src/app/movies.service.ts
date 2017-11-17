@@ -9,9 +9,12 @@ import { ActionService } from './action.service';
 export class MoviesService {
 
   constructor(private actionService: ActionService) { }
-
-  getMovies(): Observable<any>{
-  return this.actionService.getAction('/assets/movies.json');
+  
+  getMovies(): Observable<Movie[]> {
+    return this.http
+      .get('/assets/movies.json')
+      // I might not be getting this point here
+      .map(data => data.json());
   }
   getMovie(id: number) {
     return this.actionService.getAction(`/assets/movie${id}.json`);

@@ -5,8 +5,15 @@
     <h4 class="card-title">{{movie.name}}</h4>
     <p class="card-text">{{movie.summary}}</p>
     <a [routerLink]="['/details', movie.id]"class="btn btn-primary">Details</a>
-    
+    <button type="button" class="btn btn-danger" (click)="eraseMovie(i)">Bye bye!</button>
   </div>
+  
+</div>
+<div class="container">
+<input class="form-control" [(ngModel)]="movie" placeholder="Title of the Movie">
+<input class="form-control" [(ngModel)]="url" placeholder="Url of the Poster Img">
+<input class="form-control" [(ngModel)]="detail" placeholder="Summary of the movie">
+<button type="button" class="btn btn-primary" (click)="addMovie(movie, url, detail)">Add movie!</button>
 </div>
 </div>
-<p *ngIf="!movies.length">A Wild Error Has Appeared!</p>
+<p *ngIf="!movies.length">The answer to life the universe and everything is 42</p>

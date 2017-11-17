@@ -11,6 +11,23 @@ export class HomeComponent implements OnInit {
 
   constructor(private moviesService: MoviesService) { }
 
+  eraseMovie(i: number): void {
+    this.movies.splice(i, 1);
+  }
+  addMovie(movie: string, url: string, detail: string): void {
+    const newMovie = ({
+      id: this.movies.length + 1,
+      name: movie,
+      poster: url,
+      year: 0,
+      duration: '',
+      type: '',
+      summary: detail,
+      director: '',
+      stars: []
+    });
+    this.movies.push(newMovie);
+  }
   ngOnInit() {
     this.moviesService.getMovies().subscribe(movies => {
       this.movies = movies;

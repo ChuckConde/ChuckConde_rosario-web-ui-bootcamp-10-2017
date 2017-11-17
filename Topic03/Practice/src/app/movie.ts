@@ -7,5 +7,5 @@ export interface Movie {
     type: string;
     summary: string;
     director: string;
-    stars: Object[];
+    stars: Object;
 }
