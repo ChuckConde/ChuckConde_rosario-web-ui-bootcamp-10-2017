@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MoviesService } from './movies.service';
+import { ActionService } from './action.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MoviesService } from './movies.service';
     FormsModule
   ],
   providers: [
-    MoviesService
+    MoviesService,
+    ActionService
   ],
   bootstrap: [AppComponent]
 })
