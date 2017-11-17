@@ -1,4 +1,4 @@
-export interface Movie {
+export class Movie {
     id: number;
     name: string;
     poster: string;
@@ -7,5 +7,12 @@ export interface Movie {
     type: string;
     summary: string;
     director: string;
-    stars: Object;
+
+    stars: Object[];
+    constructor(movie: string, url: string, detail: string) {
+        this.name = movie;
+        this.poster = url;
+        this.summary = detail;
+    }
+
 }

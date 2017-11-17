@@ -77,5 +77,30 @@ holder.ondrop = function (e) {
     return false;
 };
 
+function sMsg() {
+    let ws = new WebSocket('ws://demos.kaazing.com/echo');
+    let msg = document.getElementById('msg').value;
+    if (!msg) {
+        document.getElementById('answer').innerHTML += `<p>You have to write something!</p>`;
+        return;
+    }
+
+    ws.onopen = function () {
+        ws.send(msg);
+        document.getElementById('answer').innerHTML += `<p>You wrote: ${msg}</p>`;
+    };
+
+    ws.onmessage = function (e) {
+        var receivedMsg = e.data;
+        document.getElementById('answer').innerHTML += `<p>You recived: ${receivedMsg}</p>`;
+    };
+
+    ws.onclose = function () {
+        console.log('Closed');
+    };
+
+    window.onbeforeunload = function (e) {
+        socket.close();
+    };
 }
 
