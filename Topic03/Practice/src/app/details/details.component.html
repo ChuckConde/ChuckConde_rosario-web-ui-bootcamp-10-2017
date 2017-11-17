@@ -1,3 +1,18 @@
-<p>
-  details works!
-</p>
+<div *ngIf="movie" class="container">
+  <img [src]="movie.poster" alt="">
+  <ul>
+    <li>{{movie.name}}</li>
+    <li>{{movie.year}}</li>
+    <li>{{movie.duration}}</li>
+    <li>{{movie.type}}</li>
+    <li>{{movie.summary}}</li>
+    <li>{{movie.director}}</li>
+    </ul>
+    <h3>Staring:</h3>
+    <hr>
+    <div *ngFor="let star of movie.stars">
+    <p >Name: {{star.name}}</p>
+    <p>Born: {{star.born}}</p>
+    <hr>
+  </div>
+  </div>
