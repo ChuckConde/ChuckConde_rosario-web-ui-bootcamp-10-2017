@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   }
   addMovie(movie: string, url: string, detail: string, made: number, time: string, genre: string, supervisor: string): void {
     const newMovie = new Movie(movie, url, detail, made, time, genre, supervisor);
+
   }
   ngOnInit() {
     this.moviesService.getMovies().subscribe(movies => {

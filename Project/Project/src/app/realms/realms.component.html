@@ -1,0 +1,30 @@
+<div class="headBanner">
+  <div class="banner">
+    <img class="imgBanner img-fluid" src="../../assets/img/Banners/Realms.jpg" alt="banner of Wow">
+  </div>
+</div>
+<div class="container tableDiv">
+  <table class="table fontTable">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+        <th scope="col">Battlegroup</th>
+        <th scope="col">Population</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let realm of realms">
+        <th scope="row" class="text-light bg-dark">{{ realm.name }}</th>
+        <td class="text-light bg-dark">{{ realm.type }}</td>
+        <td class="text-light bg-dark">{{ realm.status }}</td>
+        <td class="text-light bg-dark">{{ realm.battlegroup}}</td>
+        <td *ngIf="realm.population == 'n/a'" class="text-light na">{{ realm.population }}</td>
+        <td *ngIf="realm.population == 'low'" class="text-light low">{{ realm.population }}</td>
+        <td *ngIf="realm.population == 'medium'" class="text-light medium" >{{ realm.population }}</td>
+        <td *ngIf="realm.population == 'full'" class="text-light full">{{ realm.population }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

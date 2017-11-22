@@ -1,0 +1,95 @@
+<div class="headBanner">
+  <div class="banner">
+    <img class="imgBanner img-fluid" src="../../assets/img/Banners/PVP.jpg" alt="banner of Wow">
+  </div>
+</div>
+<div class="container">
+  <h2>2v2</h2>
+  <table class="table fontTable">
+    <thead>
+      <tr>
+        <th scope="col">Rank</th>
+        <th scope="col">Player</th>
+        <th scope="col">Realm</th>
+        <th scope="col">Wins</th>
+        <th scope="col">Losses</th>
+        <th scope="col">Rating</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pvp of pvps.rows | slice:0:10">
+        <th scope="row" class="text-light bg-dark">{{ pvp.ranking }}</th>
+
+        <td class="text-light bg-dark">
+          <a href="" [routerLink]="['/playersummary', pvp.realmName, pvp.name]">
+            {{ pvp.name }}
+          </a>
+        </td>
+        <td class="text-light bg-dark">{{ pvp.realmName }}</td>
+        <td class="text-light bg-dark">{{ pvp.seasonWins }}</td>
+        <td class="text-light bg-dark">{{ pvp.seasonLosses }}</td>
+        <td class="text-light bg-dark">{{ pvp.rating }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h2>3v3</h2>
+  <table class="table fontTable">
+    <thead>
+      <tr>
+        <th scope="col">Rank</th>
+        <th scope="col">Player</th>
+        <th scope="col">Realm</th>
+        <th scope="col">Wins</th>
+        <th scope="col">Losses</th>
+        <th scope="col">Rating</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pvp3v3 of pvps3v3.rows | slice:0:10">
+        <th scope="row" class="text-light bg-dark">{{ pvp3v3.ranking }}</th>
+        <td class="text-light bg-dark">
+          <a href="" [routerLink]="['/playersummary', pvp3v3.realmName, pvp3v3.name]">
+            {{ pvp3v3.name }}
+          </a>
+        </td>
+        <td class="text-light bg-dark">{{ pvp3v3.realmName }}</td>
+        <td class="text-light bg-dark">{{ pvp3v3.seasonWins }}</td>
+        <td class="text-light bg-dark">{{ pvp3v3.seasonLosses }}</td>
+        <td class="text-light bg-dark">{{ pvp3v3.rating }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h2>RBG</h2>
+  <table class="table fontTable">
+    <thead>
+      <tr>
+        <th scope="col">Rank</th>
+        <th scope="col">Player</th>
+        <th scope="col">Realm</th>
+        <th scope="col">Wins</th>
+        <th scope="col">Losses</th>
+        <th scope="col">Rating</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pvprbg of pvpsrbg.rows | slice:0:10">
+        <th scope="row" class="text-light bg-dark">{{ pvprbg.ranking }}</th>
+        <td class="text-light bg-dark">
+          <a href="" [routerLink]="['/playersummary', pvprbg.realmName, pvprbg.name]">
+            {{ pvprbg.name }}
+          </a>
+        </td>
+        <td class="text-light bg-dark">{{ pvprbg.realmName }}</td>
+        <td class="text-light bg-dark">{{ pvprbg.seasonWins }}</td>
+        <td class="text-light bg-dark">{{ pvprbg.seasonLosses }}</td>
+        <td class="text-light bg-dark">{{ pvprbg.rating }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+</div>

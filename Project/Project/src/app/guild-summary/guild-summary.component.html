@@ -1,0 +1,56 @@
+<div class="headBanner">
+  <div class="banner">
+    <img class="imgBanner img-fluid" src="../../assets/img/Banners/Guild.jpg" alt="banner of Wow">
+  </div>
+</div>
+<div *ngIf="guilds" class="container ">
+  <h2>Guild Information</h2>
+  <table class="table fontTable">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Realm</th>
+        <th scope="col">Battlegroup</th>
+        <th scope="col">Level</th>
+        <th scope="col">Achivement Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-light bg-dark">{{ guilds.name }}</th>
+        <td class="text-light bg-dark">{{ guilds.realm }}</td>
+        <td class="text-light bg-dark">{{ guilds.battlegroup }}</td>
+        <td class="text-light bg-dark">{{ guilds.level }}</td>
+        <td class="text-light bg-dark">{{ guilds.achievementPoints }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h2>Members of the Guild</h2>
+  <table class="table fontTable">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Class</th>
+        <th scope="col">Race</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of guilds.members">
+        <th scope="row" class="text-light bg-dark">
+          <a *ngIf="member.character.thumbnail" href="" [routerLink]="['/playersummary', guilds.realm, member.character.name]">
+            <img class="thumbnailImg img-fluid" src="http://render-us.worldofwarcraft.com/character/{{member.character.thumbnail}}" onerror="this.src = 'http://www.stallerdental.com/wp-content/uploads/2016/12/user-icon.png';"
+              alt=""> {{ member.character.name }}
+          </a>
+        </th>
+        <td class="text-light bg-dark" *ngIf="classFound">{{ classCheck(member.character.class) }}</td>
+        <td class="text-light bg-dark" *ngIf="raceFound">{{ raceCheck(member.character.race) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="noguilds" *ngIf="!guilds">
+  Guilds doesn't found
+</div>

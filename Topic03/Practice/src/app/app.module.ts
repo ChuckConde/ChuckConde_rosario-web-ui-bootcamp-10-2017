@@ -10,7 +10,6 @@ import { HttpModule } from '@angular/http';
 import { MoviesService } from './movies.service';
 import { ActionService } from './action.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,0 +1,36 @@
+
+
+
+@media (min-width: 900px){
+    .profileContainer{
+    flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+}
+.stats{
+    flex: 1;
+}
+.profileImg{
+    flex: 1;
+}
+.thumbnailImg{
+    height: 36px;
+    width: 36px;
+}
+}
+@media (max-width: 900px){
+    .fontTable{
+        font-size: 12px;
+    }
+    .thumbnailImg{
+    height: 25px;
+    width: 25px;
+}
+    .fontTableB{
+        font-size: 10px;
+    }
+.itemImg{
+    height: 25px;
+    width: 25px;
+}
+}

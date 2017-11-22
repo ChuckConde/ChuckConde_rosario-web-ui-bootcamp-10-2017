@@ -1,0 +1,17 @@
+.na{
+    background-color: rgba(71, 71, 71, 0.151)
+}
+.low{
+    background-color: rgb(0, 202, 0)
+}
+.medium{
+    background-color: orange;
+}
+.full{
+    background-color: red;
+}
+@media (max-width: 900px){
+    .fontTable{
+        font-size: 12px;
+    }
+}

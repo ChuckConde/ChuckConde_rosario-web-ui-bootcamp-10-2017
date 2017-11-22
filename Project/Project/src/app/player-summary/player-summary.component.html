@@ -1,0 +1,364 @@
+<div class="headBanner">
+  <div class="banner">
+    <img class="imgBanner img-fluid" src="../../assets/img/Banners/Player.jpg" alt="banner of Wow">
+  </div>
+</div>
+<div *ngIf="players" class="container">
+  <div class="container profileContainer">
+    <div class="profileImg">
+  <img class="imgProfile img-fluid" [src]="renderPath" onerror="this.src = 'https://static1.squarespace.com/static/5937e362be659441f72e7c12/t/595120eadb29d60c5983e4a2/1498489067243/Sorry-image-not-available.png';"
+    alt="">
+    </div>
+    <div class="stats">
+      <table class="table fontTable">
+        <thead>
+          <tr>
+            <th scope="col">Stat</th>
+            <th scope="col">Amount</th>
+      
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-light bg-dark">Health</th>
+            <td class="text-light bg-dark">{{players.stats.health}}</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-light bg-dark">Power Type</th>
+            <td class="text-light bg-dark">{{(players.stats.powerType)[0].toUpperCase() + (players.stats.powerType).slice(1)}}</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-light bg-dark">{{(players.stats.powerType)[0].toUpperCase() + (players.stats.powerType).slice(1)}}</th>
+            <td class="text-light bg-dark">{{players.stats.power}}</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-light bg-dark">Strength</th>
+            <td class="text-light bg-dark">{{players.stats.str}}</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-light bg-dark">Agility</th>
+            <td class="text-light bg-dark">{{players.stats.agi}}</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-light bg-dark">Intelligence</th>
+            <td class="text-light bg-dark">{{players.stats.int}}</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-light bg-dark">Stamina</th>
+            <td class="text-light bg-dark">{{players.stats.sta}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  <h2>Common Character Info</h2>
+  <table class="table fontTableB">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Class</th>
+        <th scope="col">Race</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Level</th>
+        <th scope="col">Achievement Points</th>
+        <th scope="col" *ngIf="players.guild">Guild</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-light bg-dark">
+          <img class="thumbnailImg img-fluid" src="http://render-us.worldofwarcraft.com/character/{{players.thumbnail}}" 
+           onerror="this.src = 'http://www.stallerdental.com/wp-content/uploads/2016/12/user-icon.png';" alt=""> {{ players.name }}</th>
+        <td class="text-light bg-dark" *ngIf="classFound">{{ classCheck(players.class) }}</td>
+        <td class="text-light bg-dark" *ngIf="raceFound">{{ raceCheck(players.race)}}</td>
+        <td class="text-light bg-dark" *ngIf="players.gender === 0">Male</td>
+        <td class="text-light bg-dark" *ngIf="players.gender === 1">Female</td>
+        <td class="text-light bg-dark">{{ players.level }}</td>
+        <td class="text-light bg-dark">{{ players.achievementPoints }}</td>
+        <td class="text-light bg-dark" *ngIf="players.guild">
+          <a href="" [routerLink]="['/guildsummary', players.realm, players.guild.name]">
+          {{players.guild.name}}
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Pvp Stats</h2>
+  <hr>
+  <h3>Pvp 2v2</h3>
+  <table class="table fontTableB">
+    <thead>
+      <tr>
+        <th scope="col">Rating</th>
+        <th scope="col">Weekly Played</th>
+        <th scope="col">Weekly Won</th>
+        <th scope="col">Weekly Lost</th>
+        <th scope="col">Season Played</th>
+        <th scope="col">Season Won</th>
+        <th scope="col">Season Lost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_2v2.rating }}</th>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_2v2.weeklyPlayed }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_2v2.weeklyWon }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_2v2.weeklyLost }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_2v2.seasonPlayed }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_2v2.seasonWon }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_2v2.seasonLost }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h3>Pvp 3v3</h3>
+  <table class="table fontTableB">
+    <thead>
+      <tr>
+        <th scope="col">Rating</th>
+        <th scope="col">Weekly Played</th>
+        <th scope="col">Weekly Won</th>
+        <th scope="col">Weekly Lost</th>
+        <th scope="col">Season Played</th>
+        <th scope="col">Season Won</th>
+        <th scope="col">Season Lost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_3v3.rating }}</th>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_3v3.weeklyPlayed }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_3v3.weeklyWon }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_3v3.weeklyLost }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_3v3.seasonPlayed }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_3v3.seasonWon }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_3v3.seasonLost }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h3>Pvp RBG</h3>
+  <table class="table fontTableB">
+    <thead>
+      <tr>
+        <th scope="col">Rating</th>
+        <th scope="col">Weekly Played</th>
+        <th scope="col">Weekly Won</th>
+        <th scope="col">Weekly Lost</th>
+        <th scope="col">Season Played</th>
+        <th scope="col">Season Won</th>
+        <th scope="col">Season Lost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_RBG.rating }}</th>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_RBG.weeklyPlayed }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_RBG.weeklyWon }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_RBG.weeklyLost }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_RBG.seasonPlayed }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_RBG.seasonWon }}</td>
+        <td class="text-light bg-dark">{{ players.pvp.brackets.ARENA_BRACKET_RBG.seasonLost }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Common Items Info</h2>
+  <ul>
+    <li>Average Item Level Equipped: {{players.items.averageItemLevelEquipped}}</li>
+  </ul>
+  <hr>
+  <h4>Items Specification</h4>
+  <table class="table fontTable">
+    <thead>
+      <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quality</th>
+        <th scope="col">Item Level</th>
+        <th scope="col">Armor</th>
+        <th scope="col">Icon</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="players.items.head">
+        <th scope="row" class="text-light bg-dark">Head</th>
+        <td class="text-light bg-dark">{{ players.items.head.name }}</td>
+        <td class="text-light bg-dark">{{ players.items.head.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.head.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.head.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.head.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.neck">
+        <th scope="row" class="text-light bg-dark">Neck</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.neck.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.neck.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.neck.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.neck.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.neck.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.shoulder">
+        <th scope="row" class="text-light bg-dark">Shoulder</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.shoulder.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.shoulder.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.shoulder.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.shoulder.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.shoulder.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.back">
+        <th scope="row" class="text-light bg-dark">Back</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.back.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.back.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.back.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.back.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.back.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.chest">
+        <th scope="row" class="text-light bg-dark">Chest</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.chest.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.chest.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.chest.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.chest.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.chest.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.wrist">
+        <th scope="row" class="text-light bg-dark">Wrist</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.wrist.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.wrist.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.wrist.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.wrist.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.wrist.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.shoulder">
+        <th scope="row" class="text-light bg-dark">Shoulder</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.shoulder.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.shoulder.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.shoulder.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.shoulder.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.shoulder.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.hands">
+        <th scope="row" class="text-light bg-dark">Hands</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.hands.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.hands.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.hands.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.hands.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.hands.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.waist">
+        <th scope="row" class="text-light bg-dark">Waist</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.waist.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.waist.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.waist.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.waist.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.waist.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.legs">
+        <th scope="row" class="text-light bg-dark">Legs</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.legs.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.legs.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.legs.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.legs.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.legs.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.feet">
+        <th scope="row" class="text-light bg-dark">Feet</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.feet.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.feet.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.feet.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.feet.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.feet.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.finger1">
+        <th scope="row" class="text-light bg-dark">First Finger</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.finger1.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.finger1.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.finger1.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.finger1.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.finger1.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.finger2">
+        <th scope="row" class="text-light bg-dark">Second Finger</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.finger2.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.finger2.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.finger2.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.finger2.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.finger2.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.trinket1">
+        <th scope="row" class="text-light bg-dark">First Trinket</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.trinket1.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.trinket1.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.trinket1.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.trinket1.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.trinket1.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.trinket2">
+        <th scope="row" class="text-light bg-dark">Second Trinket</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.trinket2.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.trinket2.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.trinket2.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.trinket2.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.trinket2.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.mainHand">
+        <th scope="row" class="text-light bg-dark">Main Hand</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.mainHand.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.mainHand.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.mainHand.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.mainHand.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.mainHand.icon}}.jpg" alt="">
+        </td>
+      </tr>
+      <tr *ngIf="players.items.offHand">
+        <th scope="row" class="text-light bg-dark">Off Hand</th>
+        <th scope="row" class="text-light bg-dark">{{ players.items.offHand.name }}</th>
+        <td class="text-light bg-dark">{{ players.items.offHand.quality }}</td>
+        <td class="text-light bg-dark">{{ players.items.offHand.itemLevel }}</td>
+        <td class="text-light bg-dark">{{ players.items.offHand.armor }}</td>
+        <td class="text-light bg-dark">
+          <img class="itemImg" src="https://wow.zamimg.com/images/wow/icons/large/{{players.items.offHand.icon}}.jpg" alt="">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+</div>
+<div class="nouser" *ngIf="!players">
+  Players doesn't found
+</div>
